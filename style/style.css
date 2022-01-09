@@ -1,30 +1,71 @@
-/* {
+/* reset */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}*/
+    font-family: 'roboto', sans-serif;
+}
 
+/* header */
+
+.flexxy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3%;
+    margin: 1%;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: .4em;
+    padding: 2% 5%;
+    border-bottom: 1.8px solid grey;
+    border-left: 2px solid grey;
+}
+
+/* sketch zone */
 .section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-}
-
-.section h1 {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 4em;
+    height: auto;
 }
 
 .container {
+    margin-top: 3%;
+    margin-bottom: 3%;
     width: 600px;
     height: 600px;
     display: grid;
-    z-index: 100;
-    border: 2px solid teal;
+    z-index: 1;
+    border: 2px solid rgba(202, 202, 202, 0.521);
+    border-radius: 5px;
+    box-shadow: rgba(77, 76, 76, 0.555) 2px 2px 18px;
 }
+
+/* buttons */
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0;
+    height: 100%;
+    width: 75%;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 1% 2%;
+    margin: auto 2%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(77, 76, 76, 0.555) 2px 2px 5px;
+}
+    .btn:hover {
+        box-shadow: rgba(77, 76, 76, 0.555) 2px 2px 15px;
+    }
