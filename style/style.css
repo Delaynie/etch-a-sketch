@@ -1,9 +1,16 @@
+/* 1-10-22 Still a work in progress :) */
+
 /* reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
+}
+
+.dark-mode {
+    background-color: rgb(60,60,60); /* rgb(53, 52, 52);*/
+    color: rgb(218, 216, 216);
 }
 
 /* header */
@@ -38,8 +45,8 @@ header h1 {
 .container {
     margin-top: 3%;
     margin-bottom: 3%;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     display: grid;
     z-index: 1;
     border: 2px solid rgba(202, 202, 202, 0.521);
@@ -55,7 +62,8 @@ header h1 {
     align-items: center;
     margin: 5% 0;
     height: 100%;
-    width: 75%;
+    width: 80%;
+    /*flex-wrap: wrap;*/
 }
 
 .btn {

@@ -1,3 +1,5 @@
+// 1-10-22 Still a work in progress :)
+
 const container = document.querySelector('.container')
 const btnBlack = document.createElement('button')
 const btnGrey = document.createElement('button')
@@ -5,6 +7,7 @@ const btnSkittles = document.createElement('button')
 const btnRGB = document.createElement('button')
 const btnResize = document.createElement('button')
 const btnEraser = document.createElement('button')
+const btnDarkMode = document.createElement('button')
 //const btnReset = document.createElement('button')
 const buttonsContainer = document.querySelector('.buttons')
 
@@ -150,6 +153,24 @@ function reset() {
     boxes.forEach(box => box.remove())
 }
 
+// function to toggle dark mode
+function goDark() {
+    const body = document.body;
+    btnDarkMode.textContent = 'Dark Mode';
+    btnDarkMode.addEventListener('click' , () => {
+        body.classList.toggle("dark-mode");
+            if (btnDarkMode.textContent === "Dark Mode") {
+                btnDarkMode.textContent = "Light Mode";
+            } else {
+                btnDarkMode.textContent = "Dark Mode";
+  }
+
+    })
+        buttonsContainer.appendChild(btnDarkMode).classList.add('btn');
+  }
+  goDark()
+
+
 // function to clear grid
 /*
 function reset() {
@@ -161,3 +182,9 @@ function reset() {
     buttonsContainer.appendChild(btnReset).classList.add('btn');
 }
 reset() */
+
+/* For when I change box shadows for dark mode:
+    container.style.boxShadow = 'rgb(0, 255, 34) 2px 2px 18px';
+    const containers = document.getElementsByClassName('.container');
+
+*/
